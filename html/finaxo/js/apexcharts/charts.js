@@ -211,12 +211,12 @@
   var chartround = jQuery("#chart-round");
   if (chartround.length > 0) {
     var options = {
-      series: [44, 55, 13, 43],
+      series: [33.3, 33.3, 33.3],
       chart: {
         width: 500,
         type: "pie",
       },
-      labels: ["CSS3", "PHP", "JavaScript", "WordPress"],
+      labels: ['Learn', 'Rise', 'Shine'],
       responsive: [
         {
           breakpoint: 480,
@@ -234,4 +234,35 @@
     var chart = new ApexCharts(document.querySelector("#chart-round"), options);
     chart.render();
   }
+
+  var chartround = jQuery("#chart-round1");
+  if (chartround.length > 0) {
+    var options = {
+      series: [55, 45, 30, 13],
+      chart: {
+      width: 500,
+      type: "pie",
+      },
+      labels: ['JavaScript', 'Python', 'R', 'Java'],
+      responsive: [
+        {
+          breakpoint: 480,
+          options: {
+            chart: {
+              width: 200,
+            },
+            legend: {
+              position: "bottom",
+            },
+          },
+        },
+      ],
+    };
+    var chart = new ApexCharts(document.querySelector("#chart-round1"), options);
+    chart.render();
+  }
+
+
 })(jQuery);
+
+
